@@ -4,14 +4,13 @@ using UnityEngine;
 
 namespace Code.Gameplay.Features.Enemies.Systems
 {
-    public class EnemyFollowHeroSystem : IExecuteSystem
-
+    public class ChaseHeroSystem : IExecuteSystem
     {
         private readonly ITimeService _timeService;
         private readonly IGroup<GameEntity> _enemies;
         private readonly IGroup<GameEntity> _heroes;
 
-        public EnemyFollowHeroSystem(ITimeService timeService, GameContext gameContext)
+        public ChaseHeroSystem(ITimeService timeService, GameContext gameContext)
         {
             _timeService = timeService;
             _heroes = gameContext.GetGroup(GameMatcher
@@ -29,14 +28,13 @@ namespace Code.Gameplay.Features.Enemies.Systems
 
         public void Execute()
         {
-            foreach (var enemy in _enemies)
             foreach (var hero in _heroes)
+            foreach (var enemy in _enemies)
             {
                 if (enemy.Distance > enemy.TargetDistance)
                 {
-                    float step = enemy.Speed * _timeService.DeltaTime;
-                    Vector3 targetPosition = Vector3.Lerp(enemy.WorldPosition, hero.WorldPosition, step);
-                    enemy.ReplaceWorldPosition(targetPosition);
+                    enemy.ReplaceDirection((hero.WorldPosition - enemy.WorldPosition).normalized);
+                    enemy.isMoving = true;
                 }
             }
         }

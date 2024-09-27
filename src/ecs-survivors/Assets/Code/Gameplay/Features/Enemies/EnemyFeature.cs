@@ -1,14 +1,14 @@
-﻿using Code.Gameplay.Common.Time;
-using Code.Gameplay.Features.Enemies.Systems;
+﻿using Code.Gameplay.Features.Enemies.Systems;
+using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay.Features.Enemies
 {
     public class EnemyFeature : Feature
     {
-        public EnemyFeature(ITimeService timeService, GameContext gameContext)
+        public EnemyFeature(ISystemFactory systemFactory)
         {
-            Add(new EnemyFollowHeroSystem(timeService, gameContext));
-            Add(new EnemyCalculateDistanceToHeroSystem(gameContext));
+            Add(systemFactory.Create<ChaseHeroSystem>());
+            Add(systemFactory.Create<EnemyCalculateDistanceToHeroSystem>());
         }
     }
 }

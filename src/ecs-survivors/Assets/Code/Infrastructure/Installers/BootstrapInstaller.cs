@@ -9,6 +9,7 @@ using Code.Gameplay.StaticData;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Identifiers;
 using Code.Infrastructure.Loading;
+using Code.Infrastructure.Systems;
 using Zenject;
 
 namespace Code.Infrastructure.Installers
@@ -21,6 +22,7 @@ namespace Code.Infrastructure.Installers
       BindInfrastructureServices();
       BindAssetManagementServices();
       BindCommonServices();
+      BindSystemFactory();
       BindContexts();
       BindGameplayServices();
       BindCameraProvider();
@@ -29,7 +31,7 @@ namespace Code.Infrastructure.Installers
     private void BindContexts()
     {
       Container.Bind<Contexts>().FromInstance(Contexts.sharedInstance).AsSingle();
-      
+
       Container.Bind<GameContext>().FromInstance(Contexts.sharedInstance.game).AsSingle();
     }
 
@@ -64,11 +66,14 @@ namespace Code.Infrastructure.Installers
       Container.Bind<ISceneLoader>().To<SceneLoader>().AsSingle();
     }
 
+    private void BindSystemFactory() =>
+      Container.Bind<ISystemFactory>().To<SystemFactory>().AsSingle();
+
     private void BindInputService()
     {
       Container.Bind<IInputService>().To<StandaloneInputService>().AsSingle();
     }
-    
+
     public void Initialize()
     {
       Container.Resolve<IStaticDataService>().LoadAll();

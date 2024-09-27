@@ -1,31 +1,27 @@
-using Code.Common.Entity;
 using Code.Common.Extensions;
 using Code.Gameplay.Features.Enemies.Behaviours;
+using Code.Infrastructure.View.Registrars;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Enemies.Registrars
 {
-    public class EnemyRegistrar : MonoBehaviour
+    public class EnemyRegistrar : EntityComponentRegistrar
     {
         public float Speed = 2f;
         public float TargetDistance = 1f;
-        public EnemyAnimator EnemyAnimator;
 
-        private GameEntity _entity;
-
-        private void Awake()
+        public override void RegisterComponents()
         {
-            _entity = CreateEntity
-                .Empty()
-                .AddTransform(transform)
+            Entity
                 .AddWorldPosition(transform.position)
                 .AddDirection(Vector2.zero)
                 .AddSpeed(Speed)
                 .AddDistance(0)
                 .AddTargetDistance(TargetDistance)
-                .AddSpriteRenderer(EnemyAnimator.SpriteRenderer)
-                .AddEnemyAnimator(EnemyAnimator)
-                .With(x => x.isEnemy = true);
+                .With(x => x.isEnemy = true)
+                .With(x => x.isTurnedAlongDirection = true);
         }
+
+        public override void UnregisterComponents() { }
     }
 }
