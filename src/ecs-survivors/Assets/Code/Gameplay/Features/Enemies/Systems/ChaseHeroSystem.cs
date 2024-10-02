@@ -1,6 +1,5 @@
 ﻿using Code.Gameplay.Common.Time;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.Enemies.Systems
 {
@@ -21,8 +20,6 @@ namespace Code.Gameplay.Features.Enemies.Systems
                 .AllOf(
                     GameMatcher.Enemy,
                     GameMatcher.Speed,
-                    GameMatcher.Distance,
-                    GameMatcher.TargetDistance,
                     GameMatcher.WorldPosition));
         }
 
@@ -31,11 +28,8 @@ namespace Code.Gameplay.Features.Enemies.Systems
             foreach (var hero in _heroes)
             foreach (var enemy in _enemies)
             {
-                if (enemy.Distance > enemy.TargetDistance)
-                {
-                    enemy.ReplaceDirection((hero.WorldPosition - enemy.WorldPosition).normalized);
-                    enemy.isMoving = true;
-                }
+                enemy.ReplaceDirection((hero.WorldPosition - enemy.WorldPosition).normalized);
+                enemy.isMoving = true;
             }
         }
     }

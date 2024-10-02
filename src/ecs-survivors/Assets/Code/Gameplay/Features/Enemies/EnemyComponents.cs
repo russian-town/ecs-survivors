@@ -5,5 +5,4 @@ namespace Code.Gameplay.Features.Enemies
 {
     [Game] public class Enemy : IComponent { }
     [Game] public class EnemyAnimatorComponent : IComponent { public EnemyAnimator Value; }
-    [Game] public class TargetDistance : IComponent { public float Value; }
 }

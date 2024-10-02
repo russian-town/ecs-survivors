@@ -45828,6 +45828,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2046211413809506313, guid: 5aa0f6aecef0da643b3ff98e1dc91c2e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3983951881125219021, guid: 5aa0f6aecef0da643b3ff98e1dc91c2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.184454
@@ -45872,7 +45876,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: goblin_torch_blue
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 357553608417064001, guid: 5aa0f6aecef0da643b3ff98e1dc91c2e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -45896,7 +45901,7 @@ PrefabInstance:
       addedObject: {fileID: 1584376565}
     - targetCorrespondingSourceObject: {fileID: 9091939340877915759, guid: 5aa0f6aecef0da643b3ff98e1dc91c2e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1584376566}
+      addedObject: {fileID: 1584376568}
   m_SourcePrefab: {fileID: 100100000, guid: 5aa0f6aecef0da643b3ff98e1dc91c2e, type: 3}
 --- !u!1 &1584376556 stripped
 GameObject:
@@ -45921,6 +45926,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 1584376563}
+  HP: 3
+  Damage: 1
   Speed: 1
   TargetDistance: 1
 --- !u!95 &1584376559 stripped
@@ -45941,7 +45948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 1584376563}
-  EnemyAnimator: {fileID: 1584376566}
+  EnemyAnimator: {fileID: 1584376568}
 --- !u!114 &1584376561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45999,7 +46006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityBehaviour: {fileID: 1584376563}
---- !u!114 &1584376566
+--- !u!114 &1584376568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46079,6 +46086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 1956276284}
+  MaxHP: 100
   Speed: 2
 --- !u!114 &1956276281
 MonoBehaviour:

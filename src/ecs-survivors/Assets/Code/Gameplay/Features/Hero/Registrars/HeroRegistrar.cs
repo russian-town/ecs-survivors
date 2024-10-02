@@ -6,7 +6,8 @@ namespace Code.Gameplay.Features.Hero.Registrars
 {
     public class HeroRegistrar : EntityComponentRegistrar
     {
-        public float Speed = 2;
+        public float MaxHP = 100f;
+        public float Speed = 2f;
 
         public override void RegisterComponents()
         {
@@ -14,8 +15,11 @@ namespace Code.Gameplay.Features.Hero.Registrars
                 .AddWorldPosition(transform.position)
                 .AddDirection(Vector2.zero)
                 .AddSpeed(Speed)
+                .AddCurrentHP(MaxHP)
+                .AddMaxHP(MaxHP)
                 .With(x => x.isHero = true)
-                .With(x => x.isTurnedAlongDirection = true);
+                .With(x => x.isTurnedAlongDirection = true)
+                .With(x => x.isMovementAvailable = true);
         }
 
         public override void UnregisterComponents() { }
