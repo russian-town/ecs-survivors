@@ -17,7 +17,7 @@ namespace Code.Gameplay.Features.TargetCollection.Systems
                     GameMatcher.CollectTargetsInterval,
                     GameMatcher.CollectTargetsTimer));
         }
-        
+
         public void Execute()
         {
             foreach (var entity in _entities)
