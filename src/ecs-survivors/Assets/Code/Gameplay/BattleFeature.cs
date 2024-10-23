@@ -8,6 +8,7 @@ using Code.Gameplay.Features.Enchants;
 using Code.Gameplay.Features.Enemies;
 using Code.Gameplay.Features.Hero;
 using Code.Gameplay.Features.Lifetime;
+using Code.Gameplay.Features.Loot;
 using Code.Gameplay.Features.Movement;
 using Code.Gameplay.Features.Statuses;
 using Code.Gameplay.Features.TargetCollection;
@@ -23,18 +24,26 @@ namespace Code.Gameplay
         {
             Add(systemFactory.Create<InputFeature>());
             Add(systemFactory.Create<BindViewFeature>());
+            
             Add(systemFactory.Create<HeroFeature>());
             Add(systemFactory.Create<EnemyFeature>());
             Add(systemFactory.Create<DeathFeature>());
+            
+            Add(systemFactory.Create<LootingFeature>());
+            
             Add(systemFactory.Create<MovementFeature>());
             Add(systemFactory.Create<AbilityFeature>());
+            
             Add(systemFactory.Create<ArmamentFeature>());
+            
             Add(systemFactory.Create<CollectTargetsFeature>());
             Add(systemFactory.Create<EffectApplicationFeature>());
+            
             Add(systemFactory.Create<EnchantFeature>());
             Add(systemFactory.Create<EffectFeature>());
             Add(systemFactory.Create<StatusFeature>());
             Add(systemFactory.Create<StatsFeature>());
+            
             Add(systemFactory.Create<ProcessDestructedFeature>());
         }
     }
