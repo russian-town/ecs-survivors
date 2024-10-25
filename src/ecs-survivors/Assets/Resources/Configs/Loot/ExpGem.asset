@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ExpGem
   m_EditorClassIdentifier: 
   TypeId: 1
-  Experience: 0
+  Experience: 1
   ViewPrefab: {fileID: 7496179142037240633, guid: b979e2e65ecdfe049ad937745d407c73, type: 3}
   EffectSetups: []
   StatusSetups: []

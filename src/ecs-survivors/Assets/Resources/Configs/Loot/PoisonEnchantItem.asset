@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TypeId: 3
   Experience: 0
-  ViewPrefab: {fileID: 0}
+  ViewPrefab: {fileID: 5916486132253117360, guid: 371a22250576aae4d9dee83d33052058, type: 3}
   EffectSetups:
   - EffectTypeId: 2
     Value: 2

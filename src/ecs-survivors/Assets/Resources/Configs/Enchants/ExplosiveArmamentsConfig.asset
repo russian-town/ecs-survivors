@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ExplosiveArmamentsConfig
   m_EditorClassIdentifier: 
   TypeId: 2
+  Icon: {fileID: 21300000, guid: 4e130a7ec3f4ee64994b644160f47644, type: 3}
   EffectSetups:
   - EffectTypeId: 1
     Value: 3
