@@ -9712,8 +9712,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7897260696194773655}
   - component: {fileID: 2893445765622195075}
-  - component: {fileID: 4239031937805407684}
-  - component: {fileID: 8186104975928984600}
+  - component: {fileID: 5776008095014193973}
+  - component: {fileID: 7474350241001614212}
   m_Layer: 0
   m_Name: garlicAura
   m_TagString: Untagged
@@ -9746,10 +9746,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8783522936459097793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0774156a07be4b36b1408cb62eff0975, type: 3}
+  m_Script: {fileID: 11500000, guid: 511653e70f1b4434a642cfce8b90ee4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4239031937805407684
+--- !u!114 &5776008095014193973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9758,11 +9758,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8783522936459097793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79f731ab5ac844e1aa974dc925683c06, type: 3}
+  m_Script: {fileID: 11500000, guid: a05134c594a6494d9f8c83798b4783ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 2893445765622195075}
---- !u!114 &8186104975928984600
+--- !u!114 &7474350241001614212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9771,7 +9771,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8783522936459097793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 413d6e5e2d5d4d65b2dbf9ec146a377f, type: 3}
+  m_Script: {fileID: 11500000, guid: 882fcc7faf9e42049cb691dc92beece5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 2893445765622195075}

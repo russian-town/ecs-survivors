@@ -5,21 +5,23 @@ using Zenject;
 
 namespace Code.Infrastructure.View
 {
-    public class SelfInitializedEntityView : MonoBehaviour
+  public class SelfInitializedEntityView : MonoBehaviour
+  {
+    public EntityBehaviour EntityBehaviour;
+    
+    private IIdentifierService _identifiers;
+
+    [Inject]
+    private void Construct(IIdentifierService identifiers) => 
+      _identifiers = identifiers;
+
+    private void Awake()
     {
-        public EntityBehaviour EntityBehaviour;
-        
-        private IIdentifierService _identifierService;
-
-        [Inject]
-        private void Construct(IIdentifierService identifierService) =>
-            _identifierService = identifierService;
-
-        private void Awake()
-        {
-            GameEntity entity = CreateEntity.Empty()
-                .AddId(_identifierService.Next());
-            EntityBehaviour.SetEntity(entity);
-        }
+      GameEntity entity = CreateEntity.Empty()
+        .AddId(_identifiers.Next());
+      
+      EntityBehaviour.SetEntity(entity);
     }
+
+  }
 }

@@ -9,30 +9,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1045153556455938967, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1045153556455938967, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1045153556455938967, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1045153556455938967, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1045153556455938967, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1045153556455938967, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1045153556455938967, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
@@ -61,9 +37,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1557407318731609291, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557407318731609291, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
+      propertyPath: m_Size.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557407318731609291, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
+      propertyPath: m_Size.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557407318731609291, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4d94380f2cdab534b96b00f84934873a, type: 3}
+    - target: {fileID: 1557407318731609291, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1557407318731609291, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -72,21 +64,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: mushroom
       objectReference: {fileID: 0}
+    - target: {fileID: 5653278803542377902, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
+      propertyPath: PoisonColor.r
+      value: 0.003921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653278803542377902, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
+      propertyPath: FreezeOutlineSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653278803542377902, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
+      propertyPath: PoisonColorIntensity
+      value: 0.358
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653278803542377902, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
+      propertyPath: FreezeOutlineSmoothness
+      value: 4.58
+      objectReference: {fileID: 0}
     - target: {fileID: 6848469130549857095, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6848469130549857095, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6848469130549857095, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8850899729667344427, guid: 02c1c61dae6b7e34d976ffa02368e391, type: 3}
-      propertyPath: m_Controller
-      value: 
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

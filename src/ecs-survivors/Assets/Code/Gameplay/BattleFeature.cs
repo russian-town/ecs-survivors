@@ -7,8 +7,8 @@ using Code.Gameplay.Features.Effects;
 using Code.Gameplay.Features.Enchants;
 using Code.Gameplay.Features.Enemies;
 using Code.Gameplay.Features.Hero;
+using Code.Gameplay.Features.Lifetime.Systems;
 using Code.Gameplay.Features.LevelUp;
-using Code.Gameplay.Features.Lifetime;
 using Code.Gameplay.Features.Loot;
 using Code.Gameplay.Features.Movement;
 using Code.Gameplay.Features.Statuses;
@@ -19,34 +19,35 @@ using Code.Infrastructure.View;
 
 namespace Code.Gameplay
 {
-    public class BattleFeature : Feature
+  public class BattleFeature : Feature
+  {
+    public BattleFeature(ISystemFactory systems)
     {
-        public BattleFeature(ISystemFactory systemFactory)
-        {
-            Add(systemFactory.Create<InputFeature>());
-            Add(systemFactory.Create<BindViewFeature>());
-            
-            Add(systemFactory.Create<HeroFeature>());
-            Add(systemFactory.Create<EnemyFeature>());
-            Add(systemFactory.Create<DeathFeature>());
-            
-            Add(systemFactory.Create<LootingFeature>());
-            Add(systemFactory.Create<LevelUpFeature>());
-            
-            Add(systemFactory.Create<MovementFeature>());
-            Add(systemFactory.Create<AbilityFeature>());
-            
-            Add(systemFactory.Create<ArmamentFeature>());
-            
-            Add(systemFactory.Create<CollectTargetsFeature>());
-            Add(systemFactory.Create<EffectApplicationFeature>());
-            
-            Add(systemFactory.Create<EnchantFeature>());
-            Add(systemFactory.Create<EffectFeature>());
-            Add(systemFactory.Create<StatusFeature>());
-            Add(systemFactory.Create<StatsFeature>());
-            
-            Add(systemFactory.Create<ProcessDestructedFeature>());
-        }
+      Add(systems.Create<InputFeature>());
+      Add(systems.Create<BindViewFeature>());
+      
+      Add(systems.Create<HeroFeature>());
+      Add(systems.Create<EnemyFeature>());
+      Add(systems.Create<DeathFeature>());
+      
+      Add(systems.Create<LootingFeature>());
+      
+      Add(systems.Create<LevelUpFeature>());
+      
+      Add(systems.Create<MovementFeature>());
+      Add(systems.Create<AbilityFeature>());
+      
+      Add(systems.Create<ArmamentFeature>());
+
+      Add(systems.Create<CollectTargetsFeature>());
+      Add(systems.Create<EffectApplicationFeature>());
+    
+      Add(systems.Create<EnchantFeature>());
+      Add(systems.Create<EffectFeature>());
+      Add(systems.Create<StatusFeature>());
+      Add(systems.Create<StatsFeature>());
+      
+      Add(systems.Create<ProcessDestructedFeature>());
     }
+  }
 }

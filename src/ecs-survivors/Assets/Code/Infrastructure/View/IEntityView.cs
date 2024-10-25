@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Code.Infrastructure.View
 {
-    public interface IEntityView
-    {
-        public GameEntity Entity { get; }
-        public void SetEntity(GameEntity entity);
-        public void ReleaseEntity();
-        GameObject gameObject { get; }
-    }
+  public interface IEntityView
+  {
+    GameEntity Entity { get; }
+    void SetEntity(GameEntity entity);
+    void ReleaseEntity();
+    
+    GameObject gameObject { get; }
+  }
 }

@@ -14,7 +14,8 @@ namespace Code.Gameplay.StaticData
     AbilityConfig GetAbilityConfig(AbilityId abilityId);
     AbilityLevel GetAbilityLevel(AbilityId abilityId, int level);
     EnchantConfig GetEnchantConfig(EnchantTypeId typeId);
-    LootConfig GetLootConfig(LootTypeId typeId);
+    LootConfig GetLootConfig(LootTypeId lootTypeId);
+    
     GameObject GetWindowPrefab(WindowId id);
     int MaxLevel();
     float ExperienceForLevel(int level);

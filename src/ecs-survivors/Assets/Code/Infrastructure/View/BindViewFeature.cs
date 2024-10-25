@@ -1,14 +1,14 @@
-﻿using Code.Infrastructure.Systems;
+using Code.Infrastructure.Systems;
 using Code.Infrastructure.View.Systems;
 
 namespace Code.Infrastructure.View
 {
-    public sealed class BindViewFeature : Feature
+  public sealed class BindViewFeature : Feature
+  {
+    public BindViewFeature(ISystemFactory systems)
     {
-        public BindViewFeature(ISystemFactory systems)
-        {
-            Add(systems.Create<BindingEntityViewFromPathSystem>());
-            Add(systems.Create<BindingEntityViewFromPrefabSystem>());
-        }
+      Add(systems.Create<BindEntityViewFromPathSystem>());
+      Add(systems.Create<BindEntityViewFromPrefabSystem>());
     }
+  }
 }

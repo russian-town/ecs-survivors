@@ -1,10 +1,10 @@
-﻿namespace Code.Gameplay.Features.LevelUp.Services
+namespace Code.Gameplay.Features.LevelUp.Services
 {
-    public interface ILevelUpService
-    {
-        float CurrentExperience { get; }
-        int CurrentLevel { get; }
-        void AddExperience(float value);
-        float ExperienceForLevelUp();
-    }
+  public interface ILevelUpService
+  {
+    float CurrentExperience { get; }
+    int CurrentLevel { get; }
+    float ExperienceForLevelUp { get; }
+    void AddExperience(float value);
+  }
 }

@@ -6,13 +6,14 @@ using UnityEngine;
 
 namespace Code.Gameplay.Features.Loot.Configs
 {
-    [CreateAssetMenu(fileName = "LootConfig", menuName = "ECS Survivors/Loot Configs", order = 0)]
-    public class LootConfig : ScriptableObject
-    {
-        public LootTypeId TypeId;
-        public float Experience;
-        public EntityBehaviour ViewPrefab;
-        public List<EffectSetup> EffectSetups;
-        public List<StatusSetup> StatusSetups;
-    }
+  [CreateAssetMenu(menuName = "ECS Survivors/Loot Config", fileName = "LootConfig")]
+  public class LootConfig : ScriptableObject
+  {
+    public LootTypeId LootTypeId;
+    public float Experience;
+    public EntityBehaviour ViewPrefab;
+
+    public List<EffectSetup> EffectSetups;
+    public List<StatusSetup> StatusSetups;
+  }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6848469130549857095}
   - component: {fileID: 1557407318731609291}
-  - component: {fileID: 723794770495105327}
+  - component: {fileID: 5976046918540340669}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1065704985033883940}
@@ -76,16 +76,16 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &723794770495105327
+--- !u!114 &5976046918540340669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,14 +94,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 792109486133688577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f2b748acf05a444cad1f2a3d6256b45, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fea46d9a21f47a1a494e6ddce632159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Renderer: {fileID: 1557407318731609291}
   FreezeColor: {r: 0.21960784, g: 0.6392157, b: 0.74509805, a: 1}
   FreezeOutlineSize: 3
   FreezeOutlineSmoothness: 8
-  PoisonColor: {r: 0.3503805, g: 0.74509805, b: 0.21960782, a: 1}
+  PoisonColor: {r: 0.003921569, g: 1, b: 0, a: 1}
   PoisonColorIntensity: 0.6
 --- !u!1 &3360128356117953061
 GameObject:
@@ -112,10 +112,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045153556455938967}
-  - component: {fileID: 2871840255980987992}
-  - component: {fileID: 1384094560010777846}
-  - component: {fileID: 8763156067257013146}
-  - component: {fileID: 398136794250880180}
+  - component: {fileID: 7604695528526262236}
+  - component: {fileID: 6116180036570099195}
+  - component: {fileID: 1998858275910845286}
   m_Layer: 0
   m_Name: projectileBase
   m_TagString: Untagged
@@ -139,7 +138,7 @@ Transform:
   - {fileID: 1065704985033883940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2871840255980987992
+--- !u!114 &7604695528526262236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,10 +147,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3360128356117953061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0774156a07be4b36b1408cb62eff0975, type: 3}
+  m_Script: {fileID: 11500000, guid: 511653e70f1b4434a642cfce8b90ee4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1384094560010777846
+--- !u!114 &6116180036570099195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,12 +159,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3360128356117953061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b7b3f68613b4fb0a14af45c29cae542, type: 3}
+  m_Script: {fileID: 11500000, guid: a05134c594a6494d9f8c83798b4783ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntityView: {fileID: 2871840255980987992}
-  EnchantVisuals: {fileID: 723794770495105327}
---- !u!114 &8763156067257013146
+  EntityView: {fileID: 7604695528526262236}
+--- !u!114 &1998858275910845286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,24 +172,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3360128356117953061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79f731ab5ac844e1aa974dc925683c06, type: 3}
+  m_Script: {fileID: 11500000, guid: 323d16d6cb0044ff90075f488021ecc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntityView: {fileID: 2871840255980987992}
---- !u!114 &398136794250880180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3360128356117953061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf9750c9a31481abe753b295ecaeec0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EntityView: {fileID: 2871840255980987992}
-  SpriteRenderer: {fileID: 1557407318731609291}
+  EntityView: {fileID: 7604695528526262236}
+  EnchantVisuals: {fileID: 5976046918540340669}
 --- !u!1 &7376349850620682343
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +186,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1065704985033883940}
-  - component: {fileID: 8850899729667344427}
   m_Layer: 0
   m_Name: container
   m_TagString: Untagged
@@ -225,24 +209,3 @@ Transform:
   - {fileID: 6848469130549857095}
   m_Father: {fileID: 1045153556455938967}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8850899729667344427
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7376349850620682343}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

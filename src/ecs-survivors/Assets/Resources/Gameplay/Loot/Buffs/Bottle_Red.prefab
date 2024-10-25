@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7383400785074891523}
-  - component: {fileID: 2637452024910319222}
-  - component: {fileID: 6203070517943799270}
+  - component: {fileID: 6844094958165132529}
+  - component: {fileID: 580706965162579289}
   m_Layer: 0
   m_Name: Bottle_Red
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 2278158125026102152}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2637452024910319222
+--- !u!114 &6844094958165132529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,10 +44,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 251982255336415677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0774156a07be4b36b1408cb62eff0975, type: 3}
+  m_Script: {fileID: 11500000, guid: 511653e70f1b4434a642cfce8b90ee4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6203070517943799270
+--- !u!114 &580706965162579289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,10 +56,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 251982255336415677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79f731ab5ac844e1aa974dc925683c06, type: 3}
+  m_Script: {fileID: 11500000, guid: a05134c594a6494d9f8c83798b4783ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EntityView: {fileID: 2637452024910319222}
+  EntityView: {fileID: 6844094958165132529}
 --- !u!1 &422479205479623140
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e138a4792f7d5e047b5a2bfe1f11da35, type: 2}
+  - {fileID: 2100000, guid: d4f1612cae5bc8a408fb9a1196793864, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -201,12 +201,12 @@ SpriteRenderer:
   m_SortingLayerID: 1531169999
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e130a7ec3f4ee64994b644160f47644, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cbfa5431ffdac7d49ae5bf38d894904b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.48}
+  m_Size: {x: 0.14, y: 0.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
