@@ -10,6 +10,7 @@ using Code.Gameplay.Features.Loot.Configs;
 using Code.Gameplay.Windows;
 using Code.Gameplay.Windows.Configs;
 using Code.Meta.Features.AfkGain.Configs;
+using Code.Meta.UI.Shop.Items;
 using UnityEngine;
 
 namespace Code.Gameplay.StaticData
@@ -20,17 +21,19 @@ namespace Code.Gameplay.StaticData
     private Dictionary<EnchantTypeId, EnchantConfig> _enchantById;
     private Dictionary<LootTypeId, LootConfig> _lootById;
     private Dictionary<WindowId, GameObject> _windowPrefabsById;
+    private List<ShopItemConfig> _shopItemConfigs;
     private LevelUpConfig _levelUp;
     private AfkGainConfig _afkGainConfig;
 
     public AfkGainConfig AfkGain => _afkGainConfig;
-    
+
     public void LoadAll()
     {
       LoadAbilities();
       LoadEnchants();
       LoadLoot();
       LoadWindows();
+      LoadShopItems();
       LoadLevelUpRules();
       LoadAfkGainConfig();
     }
@@ -50,6 +53,12 @@ namespace Code.Gameplay.StaticData
 
       throw new Exception($"Loot config for {lootTypeId} was not found");
     }
+
+    public ShopItemConfig GetShopItemConfig(ShopItemId shopItemId) => 
+      _shopItemConfigs.FirstOrDefault(x => x.ShopItemId == shopItemId);
+
+    public List<ShopItemConfig> GetShopItemConfigs() => 
+      _shopItemConfigs;
 
     public AbilityLevel GetAbilityLevel(AbilityId abilityId, int level)
     {
@@ -86,6 +95,11 @@ namespace Code.Gameplay.StaticData
         .ToDictionary(x => x.TypeId, x => x);
     }
 
+    private void LoadAfkGainConfig()
+    {
+      _afkGainConfig = Resources.Load<AfkGainConfig>("Configs/AfkGainConfig");
+    }
+
     private void LoadAbilities()
     {
       _abilityById = Resources
@@ -100,6 +114,9 @@ namespace Code.Gameplay.StaticData
         .ToDictionary(x => x.LootTypeId, x => x);
     }
 
+    private void LoadShopItems() =>
+      _shopItemConfigs = Resources.LoadAll<ShopItemConfig>("Configs/ShopItems").ToList();
+
     private void LoadWindows()
     {
       _windowPrefabsById = Resources
@@ -107,16 +124,11 @@ namespace Code.Gameplay.StaticData
         .WindowConfigs
         .ToDictionary(x => x.Id, x => x.Prefab);
     }
-
+    
     private void LoadLevelUpRules()
     {
       _levelUp = Resources
         .Load<LevelUpConfig>("Configs/LevelUp/levelUpConfig");
-    }
-
-    private void LoadAfkGainConfig()
-    {
-      _afkGainConfig = Resources.Load<AfkGainConfig>("Configs/AfkGainConfig");
     }
   }
 }

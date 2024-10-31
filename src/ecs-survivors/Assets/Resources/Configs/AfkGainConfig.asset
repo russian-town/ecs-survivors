@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00fefc9ddb8344dd9ef44e6bb955b54a, type: 3}
+  m_Script: {fileID: 11500000, guid: b74b4fe4766541e5b8be419ee38a2d8a, type: 3}
   m_Name: AfkGainConfig
   m_EditorClassIdentifier: 
-  GoldPerSeconds: 1
+  GoldPerSecond: 1

@@ -7,15 +7,14 @@ namespace Code.Infrastructure.States.GameStates
 {
   public class BattleLoopState : IState, IUpdateable
   {
-    private readonly GameContext _gameContext;
     private readonly ISystemFactory _systems;
-    
     private BattleFeature _battleFeature;
+    private readonly GameContext _gameContext;
 
     public BattleLoopState(ISystemFactory systems, GameContext gameContext)
     {
-      _gameContext = gameContext;
       _systems = systems;
+      _gameContext = gameContext;
     }
     
     public void Enter()
@@ -44,7 +43,7 @@ namespace Code.Infrastructure.States.GameStates
 
     private void DestructEntities()
     {
-      foreach (var entity in _gameContext.GetEntities())
+      foreach (GameEntity entity in _gameContext.GetEntities()) 
         entity.isDestructed = true;
     }
   }
